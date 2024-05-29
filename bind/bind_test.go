@@ -21,9 +21,9 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/mobile/internal/importers"
-	"golang.org/x/mobile/internal/importers/java"
-	"golang.org/x/mobile/internal/importers/objc"
+	"github.com/gabemeola/gomobile/internal/importers"
+	"github.com/gabemeola/gomobile/internal/importers/java"
+	"github.com/gabemeola/gomobile/internal/importers/objc"
 )
 
 func init() {

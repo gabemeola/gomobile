@@ -28,12 +28,12 @@ import (
 	"runtime"
 	"sync"
 
-	"golang.org/x/mobile/event/key"
-	"golang.org/x/mobile/event/lifecycle"
-	"golang.org/x/mobile/event/paint"
-	"golang.org/x/mobile/event/size"
-	"golang.org/x/mobile/event/touch"
-	"golang.org/x/mobile/geom"
+	"github.com/gabemeola/gomobile/event/key"
+	"github.com/gabemeola/gomobile/event/lifecycle"
+	"github.com/gabemeola/gomobile/event/paint"
+	"github.com/gabemeola/gomobile/event/size"
+	"github.com/gabemeola/gomobile/event/touch"
+	"github.com/gabemeola/gomobile/geom"
 )
 
 var initThreadID uint64

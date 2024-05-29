@@ -11,13 +11,13 @@ import (
 	"log"
 	"net"
 
-	"golang.org/x/mobile/app"
-	"golang.org/x/mobile/app/internal/apptest"
-	"golang.org/x/mobile/event/lifecycle"
-	"golang.org/x/mobile/event/paint"
-	"golang.org/x/mobile/event/size"
-	"golang.org/x/mobile/event/touch"
-	"golang.org/x/mobile/gl"
+	"github.com/gabemeola/gomobile/app"
+	"github.com/gabemeola/gomobile/app/internal/apptest"
+	"github.com/gabemeola/gomobile/event/lifecycle"
+	"github.com/gabemeola/gomobile/event/paint"
+	"github.com/gabemeola/gomobile/event/size"
+	"github.com/gabemeola/gomobile/event/touch"
+	"github.com/gabemeola/gomobile/gl"
 )
 
 func main() {

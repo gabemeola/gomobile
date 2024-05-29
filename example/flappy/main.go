@@ -12,17 +12,17 @@ import (
 	"math/rand"
 	"time"
 
-	"golang.org/x/mobile/app"
-	"golang.org/x/mobile/event/key"
-	"golang.org/x/mobile/event/lifecycle"
-	"golang.org/x/mobile/event/paint"
-	"golang.org/x/mobile/event/size"
-	"golang.org/x/mobile/event/touch"
-	"golang.org/x/mobile/exp/gl/glutil"
-	"golang.org/x/mobile/exp/sprite"
-	"golang.org/x/mobile/exp/sprite/clock"
-	"golang.org/x/mobile/exp/sprite/glsprite"
-	"golang.org/x/mobile/gl"
+	"github.com/gabemeola/gomobile/app"
+	"github.com/gabemeola/gomobile/event/key"
+	"github.com/gabemeola/gomobile/event/lifecycle"
+	"github.com/gabemeola/gomobile/event/paint"
+	"github.com/gabemeola/gomobile/event/size"
+	"github.com/gabemeola/gomobile/event/touch"
+	"github.com/gabemeola/gomobile/exp/gl/glutil"
+	"github.com/gabemeola/gomobile/exp/sprite"
+	"github.com/gabemeola/gomobile/exp/sprite/clock"
+	"github.com/gabemeola/gomobile/exp/sprite/glsprite"
+	"github.com/gabemeola/gomobile/gl"
 )
 
 func main() {
