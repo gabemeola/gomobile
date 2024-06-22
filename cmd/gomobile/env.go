@@ -65,7 +65,9 @@ func platformOS(platform string) string {
 		// not GOOS=ios, since the underlying OS (and kernel, runtime) is macOS.
 		// We also apply a "macos" or "maccatalyst" build tag, respectively.
 		// See below for additional context.
-		return "darwin"
+		// Using GOOS=darwin with build-tag ios leads to corrupt builds: https://github.com/golang/go/issues/52299
+		// => So we use GOOS=ios for now
+		return "ios"
 	default:
 		panic(fmt.Sprintf("unexpected platform: %s", platform))
 	}
@@ -92,7 +94,9 @@ func platformTags(platform string) []string {
 		// https://stackoverflow.com/questions/12132933/preprocessor-macro-for-os-x-targets/49560690#49560690
 		// TODO(ydnar): remove tag "ios" when cgo supports Catalyst
 		// See golang.org/issues/47228
-		return []string{"ios", "macos", "maccatalyst"}
+		// Using GOOS=darwin with build-tag ios leads to corrupt builds: https://github.com/golang/go/issues/52299
+		// => So we use GOOS=ios for now
+		return []string{"macos", "maccatalyst"}
 	case "appletvos", "appletvsimulator":
 		return []string{"appletvos"}
 	case "xros", "xrsimulator":
@@ -231,7 +235,10 @@ func envInit() (err error) {
 				// targets, there is also a "maccatalyst" tag.
 				// Some additional context on this can be found here:
 				// https://stackoverflow.com/questions/12132933/preprocessor-macro-for-os-x-targets/49560690#49560690
-				goos = "darwin"
+
+				// Using GOOS=darwin with build-tag ios leads to corrupt builds: https://github.com/golang/go/issues/52299
+				// => So we use GOOS=ios for now
+				goos = "ios"
 				sdk = "macosx"
 				clang, cflags, err = envClang(sdk)
 				// TODO(ydnar): the following 3 lines MAY be needed to compile
